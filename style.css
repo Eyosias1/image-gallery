@@ -1,0 +1,88 @@
+body {
+  margin: 0px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1 {
+  font-family: fantasy;
+  font-size: 3em;
+  border-bottom: 2px solid pink;
+  border-right: 2px solid pink;
+  width: 400px;
+  text-align: center;
+  box-shadow: 4px 4px 5px #888888;
+  margin-top: 10px;
+}
+
+img {
+  width: 450px;
+  height: 300px;
+  margin: 10px;
+  transition: all 0.6s;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  max-width: 100vw;
+
+}
+
+.lightbox.active {
+  display: block; /* Make the lightbox visible */
+  opacity: 1; /* Fully opaque */
+  transform: scale(1); /* Scale to normal size */
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  width: 60%;
+  max-width: 700px;
+}
+
+.close {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: all 1s ease;
+}
+
+.close:hover {
+  color: #e71212;
+  cursor: pointer;
+  transform: scale(5);
+}
+.arrows {
+  display: flex;
+  justify-content: space-around;
+}
+.prev, .next {
+  top: 55%;
+  width: auto;
+  padding: 20px;
+  color: white;
+  transition: all 1s ease;
+}
+.prev:hover, .next:hover {
+  cursor: pointer;
+  color: red;
+  transform: scale(2);
+}
